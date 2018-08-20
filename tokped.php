@@ -1,5 +1,6 @@
 <?php
 error_reporting(0);
+
 Class Bom {
 
         public  $no;
@@ -52,11 +53,9 @@ Class Bom {
         $send = $this->sendC($url, null, $data);
         // echo $send;
         if (preg_match('/opt_attempt_left/', $send)) {
-                print('Sukses cuk!');
-                print('made by LocalHost 229');
+                print('Sukses cuk!<br>');
             } else {
                 print('Gagal bego!');
-                print('made by LocalHost 229');
             }
     }
 
