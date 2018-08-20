@@ -44,18 +44,18 @@ Class Bom {
     {
         $url = "https://www.tokocash.com/oauth/otp";
         $no = $this->no;
-        $type = $this->type;
         if ($type == 1) {
             $data = "msisdn={$no}&accept=";
+        $type = $this->type;
         }elseif ($type == 2) {
              $data = "msisd={$no}&accept=call";
         }
         $send = $this->sendC($url, null, $data);
         // echo $send;
         if (preg_match('/opt_attempt_left/', $send)) {
-                print('Sukses cuk!<br>');
+                print('OPT Sukses cuk!<br>');
             } else {
-                print('Gagal bego!');
+                print('OPT Gagal bego!');
             }
     }
 
